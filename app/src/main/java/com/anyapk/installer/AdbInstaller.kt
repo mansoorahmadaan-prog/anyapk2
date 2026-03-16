@@ -34,7 +34,7 @@ object AdbInstaller {
         val status = try {
             val manager = AdbConnectionManager.getInstance(context)
 
-            // Try to auto-connect using service discovery (works after pairing)
+            // 22Try to auto-connect using service discovery (works after pairing)
             if (!manager.autoConnect(context, 3000)) {
                 ConnectionStatus.NEEDS_PAIRING
             } else {
